@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>{% block title %}{% endblock %}</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+	</head>
+	<body class="loggedin">
+		<nav class="navtop">
+			<div>
+				<h1>SHAHEEN</h1>
+
+                <a href="{{ url_for('home') }}"><i class="fas fa-home"></i>Back home</a>
+			</div>
+		</nav>
+		<div class="content">
+			{% block content %}{% endblock %}
+		</div>
+       <form action="{{ url_for('bookings') }}" method="post">
+
+				<input type="radio" name="ftype"  id="golf" value="golf">
+                <label for="golf">GOLF    RS.20,000 </label><br>
+				<input type="radio" name="ftype"  id="swimming" value="swimming">
+                <label for="swimming">SWIMMING    RS.5,000</label><br>
+		   		<input type="radio" name="ftype"  id="hitea" value="hitea">
+                <label for="hitea">HI-TEA    RS.2,000</label><br>
+		   		<input type="radio" name="ftype"  id="motor" value="motor">
+                <label for="motor">MOTORSPORTS    RS.6,000</label><br>
+		   		<input type="radio" name="ftype"  id="gym" value="gym">
+                <label for="gym">GYM    RS.700</label><br>
+		   		<label for="guests">
+					<i class="fas fa-user"></i>
+				</label>
+				<input type="text" name="guests" placeholder="Enter Number of Guests" id="guests" required>
+                <div class="msg">{{ msg }}</div>
+
+				<input type="submit" value="Proceed to payment">
+			</form>
+	</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>{% block title %}{% endblock %}</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+	</head>
+	<body class="loggedin">
+		<nav class="navtop">
+			<div>
+				<h1>SHAHEEN</h1>
+
+                <a href="{{ url_for('home') }}"><i class="fas fa-home"></i>Back home</a>
+			</div>
+		</nav>
+		<div class="content">
+			{% block content %}{% endblock %}
+		</div>
+       <form action="{{ url_for('membership') }}" method="post">
+
+				<input type="radio" name="type"  id="gold" value="gold">
+                <label for="gold">GOLD</label><br>
+
+				<input type="radio" name="type"  id="platinum" value="platinum">
+                <label for="platinum">PLATINUM</label><br>
+                <input type="radio" name="type"  id="silver" value="silver">
+                <label for="silver">SILVER</label><br>
+                <div class="msg">{{ msg }}</div>
+
+				<input type="submit" value="Buy Membership!">
+			</form>
+	</body>
+</html>

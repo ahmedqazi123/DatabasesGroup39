@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>{% block title %}{% endblock %}</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+	</head>
+	<body class="loggedin">
+		<nav class="navtop">
+			<div>
+				<h1>SHAHEEN</h1>
+
+                <a href="{{ url_for('home') }}"><i class="fas fa-home"></i>Back home</a>
+			</div>
+		</nav>
+    </body>
+
+<head>
+    <meta charset="UTF-8">
+    <title>RECEIPT</title>
+
+
+
+		 <p>Date :  {{ date }}</p>
+		 <p>Service :  {{ purpose }}</p>
+		 <p>Charges :  {{ money }}</p>
+		 <div class="msg">{{ msg }}</div>
+	<form  method="post">
+
+				<input type="submit" name = "done" value="Make Payment">
+				<input type="submit" name="notdone" value="Make Another Booking">
+			</form>
+</head>
+<body>
+
+</body>
+</html>
