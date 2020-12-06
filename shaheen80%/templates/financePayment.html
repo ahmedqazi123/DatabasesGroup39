@@ -1,0 +1,31 @@
+{% extends 'financeLayout.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<p> 
+    {{ msg }}
+</p>
+<p>
+    <form action="{{ url_for('financePayment') }}" method = "POST">
+        Booking ID : {{ message }}
+        <br>
+        Facility Type : {{ message1 }}
+        <br>
+        Date : {{ message2 }}
+        <br>
+        Time : {{ message3 }}
+        <br>
+        Status : {{ message4 }}
+        <br>
+        <label for="status">Approve/Reject : </label>
+        <select type="status" name="status" id="status">
+            <option value="Approved">Approve</option>
+            <option value="Rejected">Reject</option>
+        </select>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</p>
+
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'financeLayout.html' %}
+{% block title %}Salary Information{% endblock %}
+{% block content %}
+<p>
+    <form action="{{ url_for('disperseSalary') }}" method="POST">
+        <input type="submit" value="Disperse Salaries">
+    </form>
+    <div class="msg">{{ message }}</div>
+    <div class="msg">{{ message1 }}</div>
+</p>
+{% endblock %}
