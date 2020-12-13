@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>{% block title %}{% endblock %}</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+	</head>
+	<body class="loggedin">
+		<nav class="navtop">
+			<div>
+				<h1>SHAHEEN</h1>
+                <a href="{{ url_for('emp_home') }}"><i class="fas fa-home"></i>Back home</a>
+			</div>
+		</nav>
+    </body>
+
+<head>
+    <meta charset="UTF-8">
+    <title>ACCOUNT</title>
+     <form action="{{ url_for('verify_account') }}" method="post">
+        <label for="account">Enter Account Number: <i class="fas fa-calendar"></i></label>
+        <input type="text" name="account" placeholder="11 Digit Account Number" id="account" required>
+        <br>
+        <label for="number">Enter Credit Card Number: <i class="fas fa-calendar"></i></label>
+        <input type="text" name="number" placeholder="number" id="number" required>
+         <br>
+        <label for="bank">Choose a bank: <i class="fas fa-clock"></i></label>
+        <select type="bank" name="bank" id="bank" required>
+            <option value="Alfalah">Alfalah</option>
+            <option value="Allied Bank">Allied Bank</option>
+            <option value="HBL">Habib Bank Limited</option>
+			<option value="mzn">Meezan Bank</option>
+			<option value="Fsl">Faysal Bank</option>
+			<option value="abdb">Abu Dhabi International Bank</option>
+			<option value="mcb">MCB</option>
+			<option value="habib">Habib Metropolitan Bank</option>
+			<option value="bop">Bank of Punjab</option>
+        </select>
+        <br>
+
+        <div class="msg">{{ msg }}</div>
+        <input type="submit" value="Verify Details">
+    </form>
+</head>
+<body>
+
+</body>
+</html>

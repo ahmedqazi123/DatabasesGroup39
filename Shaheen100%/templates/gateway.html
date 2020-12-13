@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block content %}
+  <form action="{{ url_for('charge') }}" method="post">
+    <article>
+      <label>
+        <span>Amount is Rs. {{amount}}</span>
+        <span>******THIS IS A TEST RUN PLEASE ENTER CARD NUMBER 4242 4242 4242 4242********</span>
+      </label>
+    </article>
+
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="{{ key }}" data-description="CARD NUM 4242 4242 4242 4242" data-amount=amount data-locale="auto"></script>
+  </form>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'bodLayout.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h2>Website Under Construction....</h2>
+<p>Welcome {{ name }}, to Rachna Golf and Country Club!</p>
+<p>Director Status :  {{ directorStatus }}</p>
+<div class="msg"> Finance Report for the year {{ year }} uptil now </div>
+<div class="msg"> Funds available {{ funds_a }}</div>
+<div class="msg"> Funds spent {{ funds_s }}</div>
+<div class="msg"> Revenue generated {{ funds_s }}</div>
+<div class="msg"> Salaries dispersed {{ dispersed }}</div>
+<div class="msg"> Loans given {{ loans_g }}</div>
+<div class="msg"> Loans due {{ loans_d }}</div>
+<div class="msg"> Amount available in bank apart from allocated funds {{ amount }}</div>
+
+{% endblock %}

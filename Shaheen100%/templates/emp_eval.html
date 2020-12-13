@@ -1,0 +1,24 @@
+{% extends 'emp_layout.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<p>Welcome {{ name }}, to your evaluation</p>
+<p> {{ msg }}</p>
+<p> Employee ID {{ msg1 }}</p>
+<p> Name : {{ msg2}}</p>
+<p> Manager Name : {{ msg3}}</p>
+<p> Date : {{ msg4}}</p>
+<p> Job Knowledge : {{ msg5}}</p>
+<p> Work Quality: {{ msg6}}</p>
+<p> Attendance/Punctuality: {{ msg7}}</p>
+<p> Communication Skills: {{ msg8}}</p>
+<p> Initiative: {{ msg9}}</p>
+  <form action="{{ url_for('emp_eval') }}" method="post">
+
+
+				<input type="submit" value="Request Evaluation">
+			</form>
+
+
+{% endblock %}

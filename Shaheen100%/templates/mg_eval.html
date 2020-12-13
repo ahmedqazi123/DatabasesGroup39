@@ -1,0 +1,103 @@
+{% extends 'mg_layout.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<p>Fill evaluations ----</p>
+<p>{{message}}</p>
+ <form action="{{ url_for('mg_eval') }}" method = "POST">
+        Employee ID : {{ msg1 }}
+        <br>
+        Name : {{ msg2 }}
+        <br>
+        <div>
+             <div>Job Knowledge</div>
+             <label class="radio-inline">
+              <input type="radio" name="job_k" value="1"> 1
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="job_k" value="2"> 2
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="job_k" value="3"> 3
+            </label>
+             <input type="radio" name="job_k" value="4"> 4
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="job_k" value="5"> 5
+            </label>
+        </div>
+        <div>
+             <div>Work Quality</div>
+             <label class="radio-inline">
+              <input type="radio" name="work" value="1"> 1
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="work" value="2"> 2
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="work" value="3"> 3
+            </label>
+             <input type="radio" name="work" value="4"> 4
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="work" value="5"> 5
+            </label>
+        </div>
+         <div>
+              <div>Attendance</div>
+             <label class="radio-inline">
+              <input type="radio" name="att" value="1"> 1
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="att" value="2"> 2
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="att" value="3"> 3
+            </label>
+             <input type="radio" name="att" value="4"> 4
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="att"value="5"> 5
+            </label>
+        </div>
+         <div>
+              <div>Initiation Attitude</div>
+             <label class="radio-inline">
+              <input type="radio" name="in" value="1"> 1
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="in" value="2"> 2
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="in" value="3"> 3
+            </label>
+             <input type="radio" name="in" value="4"> 4
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="in" value="5"> 5
+            </label>
+        </div>
+         <div>
+             <div>Communication skills</div>
+             <label class="radio-inline" >
+              <input type="radio" name="com" value="1"> 1
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="com" value="2"> 2
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="com" value="3"> 3
+            </label>
+             <input type="radio" name="com" value="4"> 4
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="com" value="5"> 5
+            </label>
+        </div>
+
+
+
+       <input type="submit" value="Submit Evaluation">
+    </form>
+{% endblock %}

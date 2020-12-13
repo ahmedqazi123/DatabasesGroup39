@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<p>
+	<h1>
+		Current Booking:
+	</h1>
+	Booking ID : {{ message }}
+	<br>
+	Facility Type : {{ message1 }}
+	<br>
+	Date : {{ message2 }}
+	<br>
+	Time : {{ message3 }}
+	<br>
+	Status : {{ message4 }}
+</p>
+<p>
+	<form action="{{ url_for('bookings') }}" method="post">
+		<input type="radio" name="ftype"  id="golf" value="golf">
+		<label for="golf">GOLF    RS.20,000 </label><br>
+		<input type="radio" name="ftype"  id="swimming" value="swimming">
+		<label for="swimming">SWIMMING    RS.5,000</label><br>
+		<input type="radio" name="ftype"  id="hitea" value="hitea">
+		<label for="hitea">HI-TEA    RS.2,000</label><br>
+		<input type="radio" name="ftype"  id="motor" value="motor">
+		<label for="motor">MOTORSPORTS    RS.6,000</label><br>
+		<input type="radio" name="ftype"  id="gym" value="gym">
+		<label for="gym">GYM    RS.700</label><br>
+		<label for="guests"><i class="fas fa-user"></i></label>
+		<input type="text" name="guests" placeholder="Enter Number of Guests" id="guests" required>
+		<div class="msg">{{ msg }}</div>
+		<input type="submit" value="Proceed to payment">
+	</form>
+</p>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'financeLayout.html' %}
+{% block title %}Revenue Summary{% endblock %}
+{% block content %}
+<p>
+    <form action="{{ url_for('summary') }}" method="POST">
+        <input type="submit" value="summary">
+    </form>
+    <div class="msg"> Finance Report for the year {{ year }} uptil now </div>
+    <div class="msg"> Funds available {{ funds_a }}</div>
+    <div class="msg"> Funds spent {{ funds_s }}</div>
+    <div class="msg"> Revenue generated {{ rev }}</div>
+    <div class="msg"> Salaries dispersed {{ dispersed }}</div>
+    <div class="msg"> Loans given {{ loans_g }}</div>
+    <div class="msg"> Loans due {{ loans_d }}</div>
+    <div class="msg"> Amount available in bank apart from allocated funds {{ amount }}</div>
+
+
+</p>
+{% endblock %}

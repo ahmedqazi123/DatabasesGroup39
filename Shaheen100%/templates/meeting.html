@@ -1,0 +1,40 @@
+{% extends 'bodLayout.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<p>
+    {{ message }}
+    <br>
+    {{ message1 }}
+    <br>
+    {{ message2 }}
+    <br>
+    {{ message3 }}
+</p>
+<p>
+    Choose meeting options below:
+    <form action="{{ url_for('meeting') }}" method="post">
+        <label for="date">Enter a date: <i class="fas fa-calendar"></i></label>
+        <input type="text" name="date" placeholder="Date" id="date" required>
+        <br>
+        <label for="time">Choose a time: <i class="fas fa-clock"></i></label>
+        <select type="time" name="time" id="time">
+            <option value="10:00 am">10:00 AM</option>
+            <option value="12:00 pm">12:00 PM</option>
+            <option value="02:00 pm">02:00 PM</option>
+        </select>
+        <br>
+        <label for="agenda">Choose an agenda: <i class="fas fa-book"></i></label>
+        <select type="time" name="agenda" id="agenda">
+            <option value="annual review">Annual Review</option>
+            <option value="suggestions">Suggestions</option>
+            <option value="crisis situation">Crisis Situation</option>
+        </select>
+        <br>
+        <div class="msg">{{ msg }}</div>
+        <input type="submit" value="Call Meeting">
+    </form>
+</p>
+
+{% endblock %}

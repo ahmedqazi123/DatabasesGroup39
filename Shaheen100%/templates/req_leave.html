@@ -1,0 +1,19 @@
+{% extends 'emp_layout.html' %}
+{% block title %}Request Leave{% endblock %}
+{% block content %}
+<p>
+    Please fill out the application:
+    <form action="{{ url_for('req_leave') }}" method="post">
+        <label for="days">Enter number of days: <i class="fas fa-calendar"></i></label>
+        <input type="text" name="days" placeholder="Days" id="days" required>
+        <br>
+        <label for="reason">Enter Reason: <i class="fas fa-calendar"></i></label>
+        <input type="text" name="reason" placeholder="Reason" id="reason" required>
+        <br>
+
+        <input type="submit" value="Apply for leave">
+    </form>
+    <div class="msg">{{ msg }}</div>
+    <div class="msg">{{ msg2 }}</div>
+</p>
+{% endblock %}

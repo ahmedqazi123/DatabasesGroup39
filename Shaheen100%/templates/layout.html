@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>{% block title %}{% endblock %}</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+	</head>
+	<body class="loggedin">
+		<nav class="navtop">
+			<div>
+				<h1>SHAHEEN</h1>
+                <a href="{{ url_for('home') }}"><i class="fas fa-home"></i>Home</a>
+				<a href="{{ url_for('bookings') }}"><i class="fas fa-home"></i>Bookings</a>
+				<a href="{{ url_for('membership') }}"><i class="fas fa-home"></i>Membership</a>
+				<a href="{{ url_for('account') }}"><i class="fas fa-sign-out-alt"></i>Account</a>
+				<a href="{{ url_for('logout') }}"><i class="fas fa-sign-out-alt"></i>SignOut</a>
+
+			</div>
+		</nav>
+		<div class="content">
+			{% block content %}{% endblock %}
+		</div>
+	</body>
+</html>
