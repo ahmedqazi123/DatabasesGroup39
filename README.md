@@ -18,7 +18,7 @@ Designation: CEO
 
 Employees:
 1.	Username: Hamd Bhatti
-Password: miljyway1
+Password: milkyway1
 Designation: Manager
 2.	Username: MrQazi
 Password: abc123
